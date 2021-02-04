@@ -19,5 +19,5 @@ public class EmpVO {
 	Timestamp hiredate;// DATE
 	int sal;// NUMBER(7,2)
 	int comm;// NUMBER(7,2)
-	int deptno;// NUMBER(2)
+	int deptno;// NUMBER(2) 
 }

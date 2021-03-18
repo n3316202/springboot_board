@@ -14,14 +14,23 @@ public class BoardController {
 
 	@Autowired
 	BoardService boardService;
-	
-	 @GetMapping("/board/list")
-	 public String list(Model model) {
-		 
-		 log.debug("list()...");
-		 log.info("list()...");
-		 model.addAttribute("list", boardService.getList());	
-		 return "list";
-	 }
-	
+
+	@GetMapping("/")
+	public String index(Model model) {
+
+		log.debug("index()...");
+		log.info("index()...");
+
+		return "thymeleaf/index";
+	}
+
+	@GetMapping("/board/list")
+	public String list(Model model) {
+
+		log.debug("list()...");
+		log.info("list()...");
+		model.addAttribute("list", boardService.getList());
+		return "list";
+	}
+
 }
